@@ -1,0 +1,26 @@
+{
+  "i2p_base64": {
+    "raw_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+    "b64_padded": "AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8="
+  },
+  "sam_message": {
+    "raw": "HELLO REPLY RESULT=OK VERSION=3.1",
+    "cmd": "HELLO",
+    "action": "REPLY",
+    "opts": {
+      "RESULT": "OK",
+      "VERSION": "3.1"
+    }
+  },
+  "sam_commands": {
+    "hello": "HELLO VERSION MIN=3.1 MAX=3.1\n",
+    "naming_lookup": "NAMING LOOKUP NAME=example.i2p\n",
+    "dest_generate": "DEST GENERATE SIGNATURE_TYPE=7\n",
+    "session_create_prefix": "SESSION CREATE STYLE=STREAM ID=test DESTINATION=TRANSIENT",
+    "stream_connect": "STREAM CONNECT ID=test DESTINATION=DEST_B64 SILENT=false\n",
+    "stream_accept": "STREAM ACCEPT ID=test SILENT=false\n"
+  },
+  "mock_sam": {
+    "accept_payload_ascii": "hello-from-remote"
+  }
+}
