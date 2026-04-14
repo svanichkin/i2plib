@@ -177,10 +177,6 @@ func NewDestinationSAM(ctx context.Context, samAddr Address, sigType int) (*Dest
 		return nil, err
 	}
 
-	if !reply.OK() {
-		return nil, samErrorFromReply(reply)
-	}
-
 	priv := reply.Opts["PRIV"]
 	return DestinationFromBase64(priv, true)
 }
